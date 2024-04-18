@@ -8,19 +8,40 @@
 
   <div id="app">
 
-    <div class="container center">
+    <h1 class="text-center">TOP ALBUM</h1>
 
-      <h1 class="titolo">{{title}}</h1>
+    <h2 class="my-4 text-center">AGGIUNGINE UNO TU!!</h2>
 
-      <div>
-        <input type="text" class="form-control" placeholder="titolo">
-        <input type="text" class="form-control" placeholder="autore">
-        <input type="text" class="form-control" placeholder="anno">
-        <input type="text" class="form-control" placeholder="genere">
-      </div>
-
-      <button class="btn btn-primary my-4"> AGGIUNGI ALBUM </button>
+    <div class="container">
       
+      <input 
+      v-model.trim="newDisk.title" 
+      type="text" 
+      class="form-control"
+      placeholder="titolo">
+      <input 
+      v-model.trim="newDisk.author" 
+      type="text" 
+      class="form-control" 
+      placeholder="autore">
+      <input 
+      v-model.trim="newDisk.year" 
+      type="text" 
+      class="form-control" 
+      placeholder="anno">
+      <input 
+      v-model.trim="newDisk.genre" 
+      type="text" 
+      class="form-control" 
+      placeholder="genere">
+
+      <button
+      class="btn btn-primary text-center"
+      @click.stop="getNewDisk"
+      > 
+      AGGIUNGI ALBUM 
+      </button>
+
     </div>
 
     <div class="container d-flex flex-wrap justify-content-between">
@@ -41,6 +62,8 @@
   
       </div>
     </div>
+
+    
 
   </div>
   
