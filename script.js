@@ -21,12 +21,10 @@ createApp({
     getApi(apiUrl){
       axios.get(apiUrl).then(res => {
         this.disk= res.data
-        console.log(this.disk)
       })
     },
     getNewDisk(){
       const data = new FormData();
-      data.append('newDiskForm', this.disk);
       data.append('newTitle', this.newDisk.title);
       data.append('newAuthor', this.newDisk.author);
       data.append('newYear', this.newDisk.year);
@@ -34,7 +32,7 @@ createApp({
 
       axios.post(this.apiUrl, data)
         .then( res => {
-          this.newDisk= res.data
+          this.disk= res.data
         })
     }
   },

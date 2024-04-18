@@ -49,7 +49,8 @@
         <div 
         v-for="(music, index_m) in disk"
         :key= "index_m"
-        class="card m-4 my_card" style="width: 18rem;">
+        class="card m-4 my_card" 
+        style="width: 18rem;">
   
         <img :src="music.poster" class="card-img-top img_my" alt="music">
   
