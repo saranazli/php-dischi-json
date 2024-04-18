@@ -4,7 +4,7 @@ createApp({
 
   data(){
     return{
-      title: 'yo',
+      title: 'TOP 6 ALBUM',
       apiUrl: 'server.php',
       disk: []
     }

@@ -4,22 +4,44 @@
 
 ?>
 
-
 <body>
 
-  <div class="container" id="app">
-    
-    <div 
-    v-for="(music, index_m) in disk"
-    :key= "index_m"
-    class="card" style="width: 18rem;">
-      <img :src="music.poster" class="card-img-top" alt="music">
-      <div class="card-body">
-        <h5 class="card-title">{{music.title}}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div id="app">
+
+    <div class="container center">
+
+      <h1 class="titolo">{{title}}</h1>
+
+      <div>
+        <input type="text" class="form-control" placeholder="titolo">
+        <input type="text" class="form-control" placeholder="autore">
+        <input type="text" class="form-control" placeholder="anno">
+        <input type="text" class="form-control" placeholder="genere">
+      </div>
+
+      <button class="btn btn-primary my-4"> AGGIUNGI ALBUM </button>
+      
+    </div>
+
+    <div class="container d-flex flex-wrap justify-content-between">
+
+        <div 
+        v-for="(music, index_m) in disk"
+        :key= "index_m"
+        class="card m-4 my_card" style="width: 18rem;">
+  
+        <img :src="music.poster" class="card-img-top img_my" alt="music">
+  
+        <div class="card-body">
+          <h4 class="card-title">{{music.title}}</h4>
+          <h5 class="card-text">{{music.author}}</h5>
+          <p class="card-text">{{music.year}}</p>
+          <p class="card-text">{{music.genre}}</p>
+        </div>
+  
       </div>
     </div>
+
   </div>
   
 
